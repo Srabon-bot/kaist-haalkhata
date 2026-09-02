@@ -126,9 +126,6 @@ npm run dev             # voice entry works fully here — no API needed
 UI (a dev-only Vite middleware runs `api/*.ts` in-process). Auth, sync, and
 the weekly insight card need real env vars set either way.
 
-## Team
-
-Made by **Team 6** — U222, U224, U202.
 
 <p align="center">
   <img src="design/patterns/alpona-border.svg" width="100%" height="14" alt="" />
