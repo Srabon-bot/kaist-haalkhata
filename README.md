@@ -24,6 +24,92 @@
 > Rahim bhai 50 taka of lentils on credit") — and it turns into a structured
 > ledger entry: customer, item, amount, cash-or-credit. No typing, no forms.
 
+---
+
+## 📑 Table of Contents
+
+- [Screenshots](#-screenshots)
+- [Key Features](#-key-features)
+- [The tradition](#the-tradition)
+- [The problem](#the-problem)
+- [How it works](#how-it-works)
+- [Why voice entry doesn't call an AI API](#why-voice-entry-doesnt-call-an-ai-api)
+- [Tech stack](#tech-stack)
+- [Run it locally](#run-it-locally)
+- [Author](#-author)
+
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./landing.png" alt="Landing page" /><br />
+      <b>Landing</b><br />
+      <sub>The red-bound khata cover with the problem stats and sign-up / login.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="./signup.png" alt="Sign up" /><br />
+      <b>Sign up</b><br />
+      <sub>Email/password or Google sign-in.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./today-ledger.png" alt="Today's ledger" /><br />
+      <b>Today's ledger (আজকের খাতা)</b><br />
+      <sub>Cash sales, credit given, and total outstanding at a glance.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="./voice-entry.png" alt="Voice entry" /><br />
+      <b>Voice entry</b><br />
+      <sub>Tap to speak, with a structure hint and tappable sample phrases.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./customers.png" alt="Customers and baki" /><br />
+      <b>Customers &amp; baki</b><br />
+      <sub>Per-customer credit balances with paid/outstanding status.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="./summary.png" alt="Summary" /><br />
+      <b>Summary (সারাংশ)</b><br />
+      <sub>Today and last-7-day totals, optional weekly insight, and top debtors.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./history.png" alt="History" /><br />
+      <b>History (ইতিহাস)</b><br />
+      <sub>Every entry with a timestamp and a cancel option for corrections.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="./haal-khata-ritual.png" alt="Haal Khata ritual" /><br />
+      <b>Haal Khata ritual</b><br />
+      <sub>The Pohela Boishakh settle-up prompt that inspired the app.</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+| :--- | :--- |
+| **Voice-first entry** | Speak a transaction in Bangla, English, or Korean and get a structured entry: type, customer, item, amount, confidence. |
+| **Confirm before saving** | A confirmation card shows the extracted result, editable if anything is off, before it is saved. |
+| **100% local extraction** | A rule-based engine runs on-device with no network call, so voice entry works fully offline. |
+| **Customers & baki** | Track who owes what, with credit given and repayments in one place. |
+| **Daily & weekly summary** | Today and last-7-day totals for cash sales, credit given, and repayments received. |
+| **Accounts & sync** | Email/password or Google sign-in, with Neon Postgres as the account-wide source of truth across devices. |
+| **Rollback, not delete** | Soft-deleted entries sync cleanly across every device. |
+| **Cultural story** | The in-app "Why Haal Khata?" explains the 430-year-old Pohela Boishakh tradition behind the name. |
+
+---
+
 ## The tradition
 
 *খাতা* (khata) means ledger; *হাল* (haal) means new, or fresh. For over 430
@@ -126,6 +212,11 @@ npm run dev             # voice entry works fully here — no API needed
 UI (a dev-only Vite middleware runs `api/*.ts` in-process). Auth, sync, and
 the weekly insight card need real env vars set either way.
 
+---
+
+## 👨‍💻 Author
+
+- GitHub: [@Srabon-bot](https://github.com/Srabon-bot)
 
 <p align="center">
   <img src="design/patterns/alpona-border.svg" width="100%" height="14" alt="" />
